@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C.A.B.A.F.U CHAT</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Agregar el enlace a la API de Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap" async defer></script>
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Imagen en el costado del chat -->
+        <div class="chat-image">
+            <img src="https://mercado.com.ar/wp-content/uploads/2022/09/caba-768x512.png" alt="Imagen lateral" />
+        </div>
+
+        <div class="chat-main">
+            <div class="chat-header">
+                <h1>C.A.B.A.F.U CHAT</h1>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- Los mensajes aparecerán aquí -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="Escribe tu mensaje..." />
+                <button id="send-button">Enviar</button>
+
+                <!-- Botón para seleccionar imagen -->
+                <input type="file" id="image-input" accept="image/*" style="display: none;" />
+                <button id="send-image-button">Enviar Imagen</button>
+            </div>
+
+            <!-- Botón para mostrar el mapa -->
+            <div class="map-button">
+                <button id="map-button">
+                    <i class="fas fa-map-marker-alt"></i> Ver Mapa
+                </button>
+            </div>
+
+            <!-- Contenedor para el mapa -->
+            <div id="map-container" class="map-container"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
